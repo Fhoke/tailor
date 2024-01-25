@@ -28,6 +28,10 @@ module.exports = class Tailor {
             ...this.providerSettings,
         };
 
+        this.runCommandsAsShell = this.providerSettings.runCommandsAsShell ?? false;
+
+        console.log(this.runCommandsAsShell);
+
         if (this.providerConfig.buildFlat == true) {
             this.providerSettings.cssDir = '';
         }
