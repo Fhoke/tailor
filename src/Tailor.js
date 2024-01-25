@@ -28,9 +28,7 @@ module.exports = class Tailor {
             ...this.providerSettings,
         };
 
-        this.runCommandsAsShell = this.providerSettings.runCommandsAsShell ?? false;
-
-        console.log(this.runCommandsAsShell);
+        this.runCommandsAsShell = this.providerConfig?.runCommandsAsShell || false;
 
         if (this.providerConfig.buildFlat == true) {
             this.providerSettings.cssDir = '';
@@ -149,7 +147,7 @@ module.exports = class Tailor {
                 '--mode=development',
                 `--config=${this.webpackSettings.configPath}`
             ],
-            { stdio: "inherit", shell: true }
+            { stdio: "inherit", shell: this.runCommandsAsShell }
         );
 
         this.executeCommand(
@@ -166,7 +164,7 @@ module.exports = class Tailor {
                 '--mode=production',
                 `--config=${this.webpackSettings.configPath}`
             ],
-            { stdio: "inherit", shell: true }
+            { stdio: "inherit", shell: this.runCommandsAsShell }
         );
 
         this.executeCommand(
@@ -184,7 +182,7 @@ module.exports = class Tailor {
                 '--watch',
                 `--config=${this.webpackSettings.configPath}`,
             ],
-            { stdio: "inherit", shell: true }
+            { stdio: "inherit", shell: this.runCommandsAsShell }
         );
 
         this.executeCommand(
@@ -201,7 +199,7 @@ module.exports = class Tailor {
                 '--watch',
                 `--config=${this.webpackSettings.configPath}`,
             ],
-            { stdio: "inherit", shell: true }
+            { stdio: "inherit", shell: this.runCommandsAsShell }
         );
 
         this.executeCommand(
