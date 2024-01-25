@@ -269,6 +269,9 @@ module.exports = class Tailor {
                     {
                         name: "cleanupIDs",
                         active: true,
+                        params: {
+                            force: true,
+                        }
                     }
                 ],
             }]);
