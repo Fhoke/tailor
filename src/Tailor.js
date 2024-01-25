@@ -267,11 +267,11 @@ module.exports = class Tailor {
                         active: true,
                     },
                     {
-                        name: "cleanupIds",
+                        name: "cleanupIDs",
                         active: true,
                         params: {
                             force: true,
-                        },
+                        }
                     }
                 ],
             }]);
