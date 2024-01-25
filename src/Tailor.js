@@ -266,6 +266,13 @@ module.exports = class Tailor {
                         name: "removeTitle",
                         active: true,
                     },
+                    {
+                        name: "cleanupIDs",
+                        active: true,
+                        params: {
+                            force: true,
+                        }
+                    }
                 ],
             }]);
         }
