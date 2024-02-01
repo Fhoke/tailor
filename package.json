@@ -34,7 +34,7 @@
         "imagemin-svgo": "^10.0.1",
         "mini-css-extract-plugin": "^2.7.6",
         "postcss": "^8.4.32",
-        "postcss-loader": "^7.3.3",
+        "postcss-loader": "^8.1.0",
         "sass": "^1.69.5",
         "sass-loader": "^14.1.0",
         "webpack": "^5.89.0",
