@@ -245,7 +245,9 @@ module.exports = class Tailor {
             ['optipng'],
         ];
 
-        if (isProduction) {
+        console.log(this.providerConfig);
+
+        if (isProduction && this.providerConfig?.imageOptimisation?.svg != false) {
             settings.push(['svgo', {
                 plugins: [
                     {
