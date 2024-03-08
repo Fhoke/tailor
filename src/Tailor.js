@@ -240,12 +240,12 @@ module.exports = class Tailor {
      * @returns {string[][]}
      */
     imageOptimisationSettings(isProduction = false) {
-        let settings = [
-            ['jpegtran'],
-            ['optipng'],
-        ];
+        let settings = [];
 
-        if (isProduction) {
+        settings.push(['jpegtran']);
+        settings.push(['optipng']);
+
+        if (isProduction && this.providerConfig?.imageOptimisation?.svg != false) {
             settings.push(['svgo', {
                 plugins: [
                     {
