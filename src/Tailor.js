@@ -103,6 +103,9 @@ module.exports = class Tailor {
                             },
                             {
                                 loader: 'sass-loader',
+                                options: {
+                                    api: "modern",
+                                },
                             },
                         ],
                     },
